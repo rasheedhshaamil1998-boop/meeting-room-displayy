@@ -1,0 +1,34 @@
+[
+  {
+    "meeting_title": "HR Discussion",
+    "organizer": "Ahmed",
+    "start_time": "10:00",
+    "end_time": "11:00",
+    "room_name": "Executive Meeting Room",
+    "status": "ongoing"
+  },
+  {
+    "meeting_title": "Finance Review",
+    "organizer": "Sara",
+    "start_time": "11:30",
+    "end_time": "12:00",
+    "room_name": "Executive Meeting Room",
+    "status": "upcoming"
+  },
+  {
+    "meeting_title": "Quarterly Planning",
+    "organizer": "Usman",
+    "start_time": "12:30",
+    "end_time": "01:30",
+    "room_name": "Executive Meeting Room",
+    "status": "upcoming"
+  },
+  {
+    "meeting_title": "Client Check-In",
+    "organizer": "Nida",
+    "start_time": "02:00",
+    "end_time": "02:45",
+    "room_name": "Executive Meeting Room",
+    "status": "upcoming"
+  }
+]

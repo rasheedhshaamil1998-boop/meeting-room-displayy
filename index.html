@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeting Room Signage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="signage-shell">
+    <section class="branding-panel">
+      <div class="branding-panel__video-stage">
+        <video
+          class="branding-panel__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="assets/mi-76-logo.png"
+        >
+          <source src="assets/video_2026-04-04_08-46-31.mp4" type="video/mp4">
+        </video>
+        <div class="branding-panel__video-fallback"></div>
+        <div class="branding-panel__video-blend"></div>
+        <div class="branding-panel__video-right-fade"></div>
+      </div>
+
+      <div class="branding-panel__ambient-fill"></div>
+      <div class="branding-panel__brand-stack">
+        <div class="anniversary-badge" aria-hidden="true">
+          <img
+            class="anniversary-badge__logo"
+            src="assets/mi-76-logo.png"
+            alt=""
+          >
+        </div>
+        <div class="brand-lockup brand-lockup--compact" aria-label="Maldives Immigration anniversary branding">
+          <span class="brand-lockup__text">Maldives Immigration</span>
+        </div>
+      </div>
+      <div class="branding-panel__glow branding-panel__glow--one"></div>
+      <div class="branding-panel__glow branding-panel__glow--two"></div>
+      <div class="branding-panel__grid"></div>
+      <div class="branding-panel__overlay"></div>
+
+      <div class="branding-panel__content">
+        <div class="room-summary">
+          <h1 id="roomName" aria-label="MEETING ROOM">
+            <span>M</span><span>E</span><span>E</span><span>T</span><span>I</span><span>N</span><span>G</span><span>&nbsp;</span><span>R</span><span>O</span><span>O</span><span>M</span>
+          </h1>
+          <p class="eyebrow">Live meeting room status</p>
+        </div>
+      </div>
+
+      <div class="branding-panel__footer-pattern" aria-hidden="true"></div>
+    </section>
+
+    <aside class="schedule-panel">
+      <div class="schedule-panel__header">
+        <div>
+          <p class="eyebrow">Today's schedule</p>
+          <h2>Meeting Overview</h2>
+        </div>
+        <div class="sync-indicator" id="syncIndicator">Updating...</div>
+      </div>
+
+      <section class="meeting-card meeting-card--current" id="currentMeetingCard">
+        <p class="meeting-card__label">Current Meeting</p>
+        <div class="meeting-card__body">
+          <h3 id="currentMeetingTitle">Available</h3>
+          <p class="meeting-card__meta" id="currentMeetingOrganizer">No ongoing meeting</p>
+          <p class="meeting-card__time" id="currentMeetingTime">Open for booking</p>
+        </div>
+        <span class="meeting-status meeting-status--available" id="currentMeetingStatus">Available</span>
+      </section>
+
+      <section class="upcoming-block">
+        <div class="upcoming-block__header">
+          <p class="meeting-card__label">Upcoming Meetings</p>
+          <span class="upcoming-block__count" id="upcomingCount">0 scheduled</span>
+        </div>
+        <div class="upcoming-list" id="upcomingList" aria-live="polite"></div>
+      </section>
+
+      <footer class="schedule-panel__footer">
+        <p id="lastUpdated">Last updated: --</p>
+      </footer>
+    </aside>
+  </main>
+
+  <template id="upcomingMeetingTemplate">
+    <article class="upcoming-item">
+      <div class="upcoming-item__time-group">
+        <span class="upcoming-item__start"></span>
+        <span class="upcoming-item__end"></span>
+      </div>
+      <div class="upcoming-item__details">
+        <h3 class="upcoming-item__title"></h3>
+        <p class="upcoming-item__organizer"></p>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
