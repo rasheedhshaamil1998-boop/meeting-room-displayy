@@ -375,13 +375,15 @@ body::after {
 .room-summary h1 {
   margin: min(66vh, 26rem) 0 0;
   font-size: clamp(4rem, 5.5vw, 6.1rem);
-  line-height: 0.92;
+  line-height: 1.08;
   letter-spacing: -0.05em;
   max-width: none;
   white-space: nowrap;
   font-weight: 800;
   text-align: center;
   display: inline-flex;
+  align-items: flex-end;
+  padding: 0 0 0.12em;
   background: linear-gradient(
     180deg,
     #8df6ff 0%,
